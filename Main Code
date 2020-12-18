@@ -1,0 +1,20 @@
+import random
+
+answers = ['It is certain', 'Is is decidedly so', 'yes',
+           'Reply hazy try again', 'Ask again later',
+           'Concentrate and ask again', 'My reply is no',
+           'Outlook not so good', 'Very doubtful']
+
+t = True
+def getAnswer():
+    r = random.randint(0, len(answers)-1)
+    fortune = answers[r]
+    print(fortune)
+
+while t:
+    reply = None
+    getAnswer()
+    while reply not in('yes', 'no'):
+        reply = input('Play again? ')
+    if reply == 'no':
+        break
